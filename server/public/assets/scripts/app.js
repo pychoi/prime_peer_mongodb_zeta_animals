@@ -12,20 +12,11 @@ $(document).ready(function(){
             url: "/data",
             data: values,
             success: function(data){
-                appendPerson(data);
                 appendEverything(data);
             }
         })
     });
 });
-
-function appendPerson(data){
-    $("#zetaInfo").empty();
-    $("#zetaInfo").append("<div id='zetaPerson' class='zeta-person well'></div>");
-    $("#zetaPerson").text("<p>Name: " + data[0].name + "</p>");
-    $("#zetaPerson").text("<p>Animal: " + data[0].animal + "</p>");
-    $("#zetaPerson").hide().fadeIn();
-}
 
 function appendEverything(data){
     $("#zetaInfo").empty();
